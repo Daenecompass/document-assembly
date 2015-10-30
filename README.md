@@ -6,7 +6,8 @@ Aim of this software project is to demonstrate legal document assembly, using in
 It is developed as a part of PhD studies on the Faculty of Technical Science, University of Novi Sad,
  and to present an idea which should be a starting point of PhD thesis.
 
-It is Eclipse project, written in the Java programming language. It uses tuProlog library (http://apice.unibo.it/xwiki/bin/view/Tuprolog/)
+It is Eclipse project, written in the Java programming language and it uses tuProlog library (http://apice.unibo.it/xwiki/bin/view/Tuprolog/).
+As a source for Prolog rules, regulations in the Republic of Serbia were considered (The Criminal Procedure Code, The Criminal Code, The Law on Road Traffic Safety).
 
 The project structure is as follows:<br/>
 /<br/>
