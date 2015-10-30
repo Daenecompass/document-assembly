@@ -1,4 +1,3 @@
-% RULES
 
 % The Criminal Code, article 289 paragraph 1
 committed(Defendant,art289par1) :- traffic_violation(Defendant), body_injuries(Victim, minor).
