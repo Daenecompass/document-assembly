@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD13 akn3_csd13.xsd">
+	<doc name="">
+		<meta>
+			<identification source="">
+				<FRBRWork>
+					<FRBRthis value=""/>
+					<FRBRuri value=""/>
+					<FRBRdate date="2015-08-25" name=""/>
+					<FRBRauthor href=""/>
+					<FRBRcountry value=""/>
+				</FRBRWork>
+				<FRBRExpression>
+					<FRBRthis value=""/>
+					<FRBRuri value=""/>
+					<FRBRdate date="2015-08-25" name=""/>
+					<FRBRauthor href=""/>
+					<FRBRlanguage language=""/>
+				</FRBRExpression>
+				<FRBRManifestation>
+					<FRBRthis value=""/>
+					<FRBRuri value=""/>
+					<FRBRdate date="2015-08-25" name=""/>
+					<FRBRauthor href=""/>
+				</FRBRManifestation>
+			</identification>
+		</meta>
+		<preface>
+			<p>
+			Republic of Serbia
+			Basic Public Prosecutor's Office in Novi Sad
+			Novi Sad
+			Date: <date date="2015-08-25">25.08.2015.</date>
+			</p>
+		</preface>
+		<mainBody>
+			<p style="text-align: center">
+				Basic Court in Novi Sad
+			</p>
+			<p>
+				Pursuant to article 43 paragraph 2 item 5 of the Criminal Procedure Code and according to articles 495 and 499 paragraph 1 of the Criminal Procedure Code, I submits
+			</p>
+			<p style="text-align: center">
+				Motion to indict
+			</p>
+			<p>
+				against <inline name="" title="defendant"></inline> because on <inline name="" title="accidentDate"></inline>, caused traffic accident, driving vehicle <inline name="" title="defendantsVehicle"></inline>, where <inline name="" title="victim"></inline> got <inline name="" title="victimInjuries"></inline> injuries,  and made damage on properties in amount of <inline name="" title="property_damage"></inline>.
+			</p>
+			<p>
+				...
+			</p>
+		</mainBody>
+		<conclusions>
+			<p>
+			On <date date="2015-08-25">25.08.2015.</date> in Novi Sad.
+			</p>
+		</conclusions>
+	</doc>
+</akomaNtoso>
