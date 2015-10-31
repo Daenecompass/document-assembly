@@ -40,7 +40,7 @@ For example, unsafe distance as the traffic rules violation, would be determined
 ```
     unsafe_distance(Defendant) [Y/n]: 
 ```
-After answering (with 'y', 'n' or only <enter>) variable value should be entered:
+After answering (with 'y', 'n' or only <<enter>>) variable value should be entered:
 ```
     Defendant: 
 ```
