@@ -1,4 +1,4 @@
-**Rule-based dialog-driven legal document assembly**
+**Rule-Based Dialog-Driven Legal Document Assembly**
 
 Author: Marko Markovic
 
