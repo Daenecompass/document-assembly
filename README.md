@@ -1,6 +1,6 @@
 **Rule-Based Dialog-Driven Legal Document Assembly**
 
-Author: Marko MarkoviÄ‡
+Author: Marko Marković
 
 The aim of this project is to demonstrate a legal document assembly method that uses legal rules and document templates for interactive fact collection.
 It is developed to work out the ideas that are the starting point of author's PhD research at Faculty of Technical Sciences, University of Novi Sad.
