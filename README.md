@@ -34,7 +34,7 @@ For example, one violation of traffic rules (not keeping safe distance from othe
 ```
     unsafe_distance(Defendant) [y/n]: 
 ```
-After answering the question with 'y', 'n' or only <enter>, the variable value should be entered:
+After answering the question with 'y', 'n' or only &lt;enter&gt;, the variable value should be entered:
 ```
     Defendant: 
 ```
