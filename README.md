@@ -1,54 +1,48 @@
 **Rule-Based Dialog-Driven Legal Document Assembly**
 
-Author: Marko Markovic
+Author: Marko MarkoviÄ‡
 
-Aim of this software project is to demonstrate legal document assembly, using interactive fact collecting, based on legal rules.
-It is developed as a part of PhD studies on the Faculty of Technical Science, University of Novi Sad,
- and to present an idea which should be a starting point of PhD thesis.
+The aim of this project is to demonstrate a legal document assembly method that uses legal rules and document templates for interactive fact collection.
+It is developed to work out the ideas that are the starting point of author's PhD research at Faculty of Technical Sciences, University of Novi Sad.
 
-It is Eclipse project, written in the Java programming language and it uses [tuProlog](http://apice.unibo.it/xwiki/bin/view/Tuprolog/) library.
-As a source for Prolog rules, regulations in the Republic of Serbia were considered (The Criminal Procedure Code, The Criminal Code, The Law on Road Traffic Safety).
+Legal rules and document templates were modeled on The Criminal Procedure Code, The Criminal Code and The Law on Road Traffic Safety (which prescribe road traffic related criminal offences in Republic of Serbia) and indictments / motions to indict selected from examplary cases.
+The software is written in Java programming language and uses [tuProlog](http://apice.unibo.it/xwiki/bin/view/Tuprolog/) library.
 
-The project structure is as follows:<br/>
+The source code is organized in an Eclipse project with the following structure:<br/>
 /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;motion_to_indict.xml - document template <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;readme.txt - this file <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;traffic_accident.pl - Prolog rules <br/>
-/src/org/draftingbyrules <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Main.java - contains main method and initiates all document assembling phases <br/> 
-/src/org/draftingbyrules/bean <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;ArgumentNode.java - representation of a node on argument graph <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Fact.java - fact name and fact value for both, prolog rules and document template fields <br/>
-/src/org/draftingbyrules/utils <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;AkomaNtosoUtil.java - creates [Akoma Ntoso](http://www.akomantoso.org/) document, based on existing template <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;CafUtil.java - creates argument graph in CAF ([Carneades](http://carneades.github.io/) argument format) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;UiUtil.java - enables collecting data, through console, entered by user <br/>
-/lib <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;tuprolog.jar - tuProlog library <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;motion_to_indict.xml - document template<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;readme.txt - this file<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;traffic_accident.pl - legal rules (in Prolog)<br/>
+/src/org/draftingbyrules<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Main.java - contains the main method that initiates document assembling process<br/>
+/src/org/draftingbyrules/bean<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;ArgumentNode.java - a node in an argument graph<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Fact.java - a variable name/value pair used to represent a fact in legal rules or document templates<br/>
+/src/org/draftingbyrules/utils<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;AkomaNtosoUtil.java - contains methods that generate indictments / motions to indict in [Akoma Ntoso](http://www.akomantoso.org/) from an existing document template<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;CafUtil.java - contains methods that generate argument graphs in CAF ([Carneades](http://carneades.github.io/) argument format)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;UiUtil.java - command-line user interface <br/>
+/lib<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;tuprolog.jar - tuProlog library<br/>
 
 
-Parameters necessary for proper program execution are stored in Main.java and corresponds to current configuration.
-When started, program gathers relevant facts through console. For Prolog rules, questions about fulfillment of predicates and variable values are being asked.
-Also, for document template, values needed for document content are being asked.
-After answering on all questions, the argument graph and the motion to indict are generated.
+Default configuration parameters are stored in Main.java. When started, the program uses command-line interface to gather facts relevant to the case. Prolog rules are used to construct relevant questions by searching predicates that have to be satisfied in order for the indictment to be true. The document template is also used to collect facts. After the user answers all the questions, the argument graph and the indictment / motion to indict are generated.
 
-Questions on Prolog facts are being asked both, on fulfillment and on variable values.
-Question on fulfillment is yes-no question where user answers with letters 'y' and 'n' (assuming 'y' as default value).
-Questions on variable values also offers default value. It is the first value, for variable with the same name, already given by user.
+Two types of questions are being asked: questions regarding the fulfillment of predicates and questions regarding the values of variables. The first type of questions are yes/no questions that are answered with 'y' or 'n' letters (assuming 'y' as the default value). The second type of questions also has default values - the first value of the variable with the same name already answered by the user.
 
-For example, unsafe distance as the traffic rules violation, would be determined by following question:
+For example, one violation of traffic rules (not keeping safe distance from other vehicles) could be determined from the answer to the following question:
 ```
-    unsafe_distance(Defendant) [Y/n]: 
+    unsafe_distance(Defendant) [y/n]: 
 ```
-After answering (with 'y', 'n' or only &lt;enter&gt;) variable value should be entered:
+After answering the question with 'y', 'n' or only <enter>, the variable value should be entered:
 ```
     Defendant: 
 ```
-If, for instance, value 'john' is entered, existence of defendant's negligence would be determined by:
+If, for instance, the value 'john' is entered, the existence of defendant's negligence would be determined by:
 ```
-    negligence(Defendant) [Y/n]: 
+    negligence(Defendant) [y/n]: 
 ```
-while default value for variable is offered:
+and the default value for the variable is offered:
 ```
     Defendant [john]: 
 ```
