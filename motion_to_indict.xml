@@ -23,6 +23,11 @@
 					<FRBRauthor href=""/>
 				</FRBRManifestation>
 			</identification>
+			<references source="">
+				<original href="" showAs=""/>
+				<TLCPerson eId="john" href="/ontology/person/john" showAs="John"/>
+				<TLCRole eId="Defendant" href="/ontology/role/Defendant" showAs="Defendant"/>
+			</references>
 		</meta>
 		<preface>
 			<p>
@@ -43,7 +48,7 @@
 				Motion to indict
 			</p>
 			<p>
-				against <inline name="" title="defendant"></inline> because on <inline name="" title="accidentDate"></inline>, caused traffic accident, driving vehicle <inline name="" title="defendantsVehicle"></inline>, where <inline name="" title="victim"></inline> got <inline name="" title="victimInjuries"></inline> injuries,  and made damage on properties in amount of <inline name="" title="property_damage"></inline>.
+				against <party eId="p1" refersTo="defendant" as="#Defendant"></party> because on <date refersTo="accidentDate" date="2015-11-11"></date>, caused traffic accident, driving vehicle <entity name="" refersTo="defendantsVehicle"></entity>, where <party refersTo="#victim"></party> got <inline name="" title="victimInjuries"></inline> injuries,  and made damage on properties in amount of <quantity refersTo="property_damage"></quantity>.
 			</p>
 			<p>
 				...
